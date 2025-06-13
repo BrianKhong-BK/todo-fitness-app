@@ -1,0 +1,10 @@
+#toLogin,
+#toSignup {
+    text-decoration: none;
+    color: #dc3545;
+}
+
+#toLogin:hover,
+#toSignup:hover {
+    text-decoration: underline;
+}
