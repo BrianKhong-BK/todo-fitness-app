@@ -1,13 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import {
-  Button,
-  Container,
-  Form,
-  Col,
-  Row,
-  Card,
-  Image,
-} from "react-bootstrap";
+import { Button, Container, Col, Row, Card, Image } from "react-bootstrap";
 import { TodoContext } from "../contexts/TodoContext";
 import { useParams } from "react-router-dom";
 
@@ -102,10 +94,10 @@ export default function ViewTodo() {
 
   return (
     <Container>
-      <div className="d-flex align-items-center gap-2">
+      <div className="d-flex align-items-center gap-4">
         <h1>{currentTodo.title}</h1>
         <Button onClick={reset}>
-          <i className="bi bi-arrow-clockwise"></i>
+          <i className="bi bi-arrow-clockwise"></i> | Reset
         </Button>
       </div>
       <Row className="mt-3">

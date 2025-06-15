@@ -1,3 +1,5 @@
-import { createContext } from 'react'
+import { createContext } from "react";
 
-export const AuthContext = createContext(null)
+// Context to make user token accessible throughout the app
+
+export const AuthContext = createContext(null);

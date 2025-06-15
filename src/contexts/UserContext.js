@@ -1,3 +1,5 @@
 import { createContext } from "react";
 
-export const UserContext = createContext(null)
+// To make user data accessible throughout the app
+
+export const UserContext = createContext(null);
