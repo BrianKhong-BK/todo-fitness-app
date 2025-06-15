@@ -8,11 +8,11 @@ import Login from "./pages/login";
 import Signup from "./pages/SignUp";
 import DashboardLayout from "./pages/DashboardLayout";
 import DashboardMain from "./pages/DashboardMain";
-import HomeLayout from "./pages/HomeLayout";
 import HomeMain from "./pages/HomeMain";
 import ErrorPage from "./pages/ErrorPage";
 import AddTodo from "./pages/AddTodo";
 import EditTodo from "./pages/EditTodo";
+import ViewTodo from "./pages/ViewTodo";
 import RequireAuth from "./components/RequireAuth";
 import CheckId from "./components/CheckId";
 import CheckLogin from "./components/CheckLogin";
@@ -57,6 +57,14 @@ export default function App() {
                     element={
                       <CheckId>
                         <EditTodo />
+                      </CheckId>
+                    }
+                  />
+                  <Route
+                    path="view/:id"
+                    element={
+                      <CheckId>
+                        <ViewTodo />
                       </CheckId>
                     }
                   />

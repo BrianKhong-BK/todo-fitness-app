@@ -14,14 +14,16 @@ export default function DashboardLayout() {
       <Navbar>
         <Container>
           <Navbar.Brand href="/dashboard">
-            <i className="bi bi-house" style={{ fontSize: "24px" }}></i>
+            <i className="bi bi-house"></i> | Home
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/dashboard/add">
-              <i className="bi bi-plus-square" style={{ fontSize: "24px" }}></i>
+              <i className="bi bi-plus-square"></i> | Add New Plan
             </Nav.Link>
           </Nav>
-          <Button onClick={logout}>Logout</Button>
+          <Button onClick={logout}>
+            <i className="bi bi-box-arrow-right"></i> | Logout
+          </Button>
         </Container>
       </Navbar>
       <Outlet />

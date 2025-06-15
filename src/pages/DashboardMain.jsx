@@ -20,18 +20,37 @@ export default function DashboardMain() {
           );
         }
 
-        const completed = todo.completed ? "Completed" : "Not completed";
-        const bg = todo.completed ? "success" : "danger";
         return (
           <Col md={4} key={todo.id} className="mt-3">
-            <Card style={{ height: "200px" }}>
+            <Card>
+              <Card.Header>
+                <h5>{todo.title} </h5>
+              </Card.Header>
               <Card.Body>
-                <Card.Title>{todo.title}</Card.Title>
-                <Card.Body>{todo.description}</Card.Body>
-                <Badge bg={bg}>{completed}</Badge>
+                <Card.Text>
+                  Number of exercises: {todo.exercises.length}
+                </Card.Text>
                 <Container>
-                  <Button href={`dashboard/edit/${todo.id}`}>Edit</Button>
-                  <Button onClick={deleteTodo}>Delete</Button>
+                  <Button
+                    variant="success"
+                    href={`dashboard/view/${todo.id}`}
+                    className="me-2 mb-2"
+                  >
+                    <i className="bi bi-play-fill"></i> | Start
+                  </Button>
+                  <Button
+                    href={`dashboard/edit/${todo.id}`}
+                    className="me-2 mb-2"
+                  >
+                    <i className="bi bi-pencil-square"></i> | Edit
+                  </Button>
+                  <Button
+                    variant="danger"
+                    onClick={deleteTodo}
+                    className="me-2 mb-2"
+                  >
+                    <i className="bi bi-trash-fill"></i> | Delete
+                  </Button>
                 </Container>
               </Card.Body>
             </Card>
@@ -46,17 +65,6 @@ export default function DashboardMain() {
         <h1>Welcome {currentUserName}</h1>
         <Row>
           <CardGroup />
-          <Col md={4} className="mt-3">
-            <Card style={{ height: "200px" }}>
-              <Button
-                className="d-flex align-items-center justify-content-center"
-                href="/dashboard/add"
-                style={{ height: "200px", fontSize: "50px" }}
-              >
-                +
-              </Button>
-            </Card>
-          </Col>
         </Row>
       </Container>
     </div>

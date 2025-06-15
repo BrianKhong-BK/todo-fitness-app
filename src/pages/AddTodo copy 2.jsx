@@ -1,58 +1,58 @@
-import { useContext, useEffect, useState } from "react";
-import { Button, Container, Form, FormCheck } from "react-bootstrap";
-import { TodoContext } from "../contexts/TodoContext";
-import { AuthContext } from "../contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
+// import { useContext, useEffect, useState } from "react";
+// import { Button, Container, Form, FormCheck } from "react-bootstrap";
+// import { TodoContext } from "../contexts/TodoContext";
+// import { AuthContext } from "../contexts/AuthContext";
+// import { useNavigate } from "react-router-dom";
 
-async function fetchExerciseData() {
-  const response = await fetch(
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json"
-  );
-  const data = await response.json();
-  return data;
-}
+// async function fetchExerciseData() {
+//   const response = await fetch(
+//     "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json"
+//   );
+//   const data = await response.json();
+//   return data;
+// }
 
-export default function AddTodo() {
-  const [exerciseData, setExerciseData] = useState([]);
-  const [button, setButton] = useState(false);
+// export default function AddTodo() {
+//   const [exerciseData, setExerciseData] = useState([]);
+//   const [button, setButton] = useState(false);
 
-  function test() {
-    setButton(true);
-  }
+//   function test() {
+//     setButton(true);
+//   }
 
-  useEffect(() => {
-    if (button) {
-      fetchExerciseData().then((data) => setExerciseData(data));
-      console.log(exerciseData);
-      setButton(false);
-    }
-  }, [button, exerciseData]);
+//   useEffect(() => {
+//     if (button) {
+//       fetchExerciseData().then((data) => setExerciseData(data));
+//       console.log(exerciseData);
+//       setButton(false);
+//     }
+//   }, [button, exerciseData]);
 
-  const Test = () => {
-    return exerciseData.map((exercise) => {
-      const [toggle, setToggle] = useState(false);
-      const img1 = `https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/${exercise.images[0]}`;
-      const img2 = `https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/${exercise.images[1]}`;
+//   const Test = () => {
+//     return exerciseData.map((exercise) => {
+//       const [toggle, setToggle] = useState(false);
+//       const img1 = `https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/${exercise.images[0]}`;
+//       const img2 = `https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/${exercise.images[1]}`;
 
-      function handleClick() {
-        setToggle(!toggle);
-      }
-      return (
-        <div key={exercise.id}>
-          <img src={toggle ? img1 : img2} alt="" onClick={handleClick} />
-          <h1>{exercise.name}</h1>
-        </div>
-      );
-    });
-  };
+//       function handleClick() {
+//         setToggle(!toggle);
+//       }
+//       return (
+//         <div key={exercise.id}>
+//           <img src={toggle ? img1 : img2} alt="" onClick={handleClick} />
+//           <h1>{exercise.name}</h1>
+//         </div>
+//       );
+//     });
+//   };
 
-  return (
-    <>
-      <Button onClick={test}>Test</Button>
-      <Test />
-    </>
-  );
-}
+//   return (
+//     <>
+//       <Button onClick={test}>Test</Button>
+//       <Test />
+//     </>
+//   );
+// }
 
 // export default function AddTodo() {
 //     const todos = useContext(TodoContext).todos
