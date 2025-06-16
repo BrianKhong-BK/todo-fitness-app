@@ -69,7 +69,7 @@ export default function EditTodo() {
               </Card.Title>
               <h3 className="mb-3">{exercise.reps} reps</h3>
               <Button variant="danger" onClick={deleteExercise}>
-                <i className="bi bi-trash-fill"></i> | Remove
+                <i className="bi bi-trash-fill"></i> Remove
               </Button>
             </Card.Body>
           </Card>
@@ -92,10 +92,10 @@ export default function EditTodo() {
         </Form.Group>
         <div className="mt-3 d-flex flex-row align-items-center gap-3">
           <Button onClick={openModal}>
-            <i className="bi bi-plus"></i> | Add exercise
+            <i className="bi bi-plus"></i> Add exercise
           </Button>
           <Button type="submit" variant="success">
-            <i className="bi bi-save"></i> | Save plan
+            <i className="bi bi-save"></i> Save plan
           </Button>
         </div>
         <AddExerciseModal

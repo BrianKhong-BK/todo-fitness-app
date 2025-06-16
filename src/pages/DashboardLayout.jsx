@@ -14,15 +14,15 @@ export default function DashboardLayout() {
       <Navbar>
         <Container>
           <Navbar.Brand href="/dashboard">
-            <i className="bi bi-house"></i> | Home
+            <i className="bi bi-house"></i> Home
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/dashboard/add">
-              <i className="bi bi-plus-square"></i> | Add New Plan
+              <i className="bi bi-plus-square"></i> Add New Plan
             </Nav.Link>
           </Nav>
           <Button onClick={logout}>
-            <i className="bi bi-box-arrow-right"></i> | Logout
+            <i className="bi bi-box-arrow-right"></i> Logout
           </Button>
         </Container>
       </Navbar>

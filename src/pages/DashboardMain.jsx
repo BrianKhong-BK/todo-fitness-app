@@ -36,20 +36,20 @@ export default function DashboardMain() {
                     href={`dashboard/view/${todo.id}`}
                     className="me-2 mb-2"
                   >
-                    <i className="bi bi-play-fill"></i> | Start
+                    <i className="bi bi-play-fill"></i> Start
                   </Button>
                   <Button
                     href={`dashboard/edit/${todo.id}`}
                     className="me-2 mb-2"
                   >
-                    <i className="bi bi-pencil-square"></i> | Edit
+                    <i className="bi bi-pencil-square"></i> Edit
                   </Button>
                   <Button
                     variant="danger"
                     onClick={deleteTodo}
                     className="me-2 mb-2"
                   >
-                    <i className="bi bi-trash-fill"></i> | Delete
+                    <i className="bi bi-trash-fill"></i> Delete
                   </Button>
                 </Container>
               </Card.Body>

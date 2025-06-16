@@ -61,8 +61,11 @@ export default function ViewTodo() {
               </Card.Title>
               <h3 className="mb-3">{exercise.reps} reps</h3>
               <Container
-                className="px-3 py-2 "
-                style={{ backgroundColor: "white", borderRadius: "5px" }}
+                className="p-2"
+                style={{
+                  backgroundColor: "rgba(0, 0, 0, 0.7)",
+                  borderRadius: "5px",
+                }}
               >
                 <Row>
                   <Col xs={6}>

@@ -58,29 +58,14 @@ export default function AddExerciseModal({
 
       return (
         <div
-          className="d-flex flex-column align-items-center justify-content-center"
+          className="d-flex flex-column align-items-center justify-content-center "
           key={exercise.id}
         >
-          <Container>
-            <Card className="mt-3">
-              <Card.Header className="d-flex align-items-center justify-content-between">
-                {exercise.name}
-                <Button onClick={addExercise}>
-                  <i className="bi bi-plus"></i> | Add
-                </Button>
-              </Card.Header>
-              <Card.Title
-                className="d-flex align-items-center justify-content-center"
-                style={{ height: "250px", overflow: "hidden" }}
-              >
-                <Image
-                  src={`https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/${exercise.images[0]}`}
-                  style={{ maxHeight: "100%", objectFit: "contain" }}
-                  className="mt-3"
-                  fluid
-                />
-              </Card.Title>
-            </Card>
+          <Container className="d-flex align-items-center justify-content-between border mt-3 p-2 rounded">
+            {exercise.name}
+            <Button onClick={addExercise}>
+              <i className="bi bi-plus"></i> Add
+            </Button>
           </Container>
           {filterExerciseData.indexOf(exercise) + 1 >= viewCount && (
             <Button className="mt-3" onClick={viewMore}>
