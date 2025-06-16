@@ -11,12 +11,10 @@ export default function ViewTodo() {
   const [exercises, setExercises] = useState(currentTodo.exercises);
 
   useEffect(() => {
-    const updatedTodo = todos.map((todo) =>
-      todo.id === currentTodo.id ? { ...todo, exercises: exercises } : todo
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) => (todo.id === id ? { ...todo, exercises } : todo))
     );
-
-    setTodos(updatedTodo);
-  }, [exercises]);
+  }, [exercises, id, setTodos]);
 
   function reset() {
     const resetCompleted = exercises.map((exercise) => {
