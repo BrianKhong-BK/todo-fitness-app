@@ -105,6 +105,19 @@ export default function EditTodo() {
           exercises={exercises}
         />
         <Row className="mt-3">
+          {exercises.length === 0 && (
+            <Container
+              className="mt-3 d-flex flex-column align-items-center justify-content-center"
+              style={{ opacity: 0.5 }}
+            >
+              <i
+                className="bi bi-folder-plus"
+                style={{ fontSize: "100px" }}
+              ></i>
+              <h5>There Are No Exercises Yet</h5>
+              <p>Click on add exercise to get started</p>
+            </Container>
+          )}
           <CardGroup />
         </Row>
       </Form>

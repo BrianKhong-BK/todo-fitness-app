@@ -41,7 +41,7 @@ export default function AddExerciseModal({
   function ExerciseList() {
     return filterExerciseData.slice(0, viewCount).map((exercise) => {
       function addExercise() {
-        if (reps) {
+        if (reps && reps > 0) {
           const newExercise = {
             id: Date.now(),
             name: exercise.name,
@@ -113,6 +113,7 @@ export default function AddExerciseModal({
               </Form.Label>
               <Form.Control
                 type="number"
+                min="0"
                 value={reps}
                 onChange={(event) => setReps(event.target.value)}
                 required

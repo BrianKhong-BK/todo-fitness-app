@@ -59,32 +59,26 @@ export default function ViewTodo() {
               </Card.Title>
               <h3 className="mb-3">{exercise.reps} reps</h3>
               <Container
-                className="p-2"
+                className="p-2 d-flex gap-2"
                 style={{
                   backgroundColor: "rgba(0, 0, 0, 0.7)",
                   borderRadius: "5px",
                 }}
               >
-                <Row>
-                  <Col xs={6}>
-                    <Button
-                      variant="success"
-                      className="w-100"
-                      onClick={completedBtn}
-                    >
-                      <i className="bi bi-check"></i>
-                    </Button>
-                  </Col>
-                  <Col xs={6}>
-                    <Button
-                      variant="danger"
-                      className="w-100"
-                      onClick={notCompletedBtn}
-                    >
-                      <i className="bi bi-x"></i>
-                    </Button>
-                  </Col>
-                </Row>
+                <Button
+                  variant="success"
+                  className="w-100"
+                  onClick={completedBtn}
+                >
+                  <i className="bi bi-check"></i>
+                </Button>
+                <Button
+                  variant="danger"
+                  className="w-100"
+                  onClick={notCompletedBtn}
+                >
+                  <i className="bi bi-x"></i>
+                </Button>
               </Container>
             </Card.Body>
           </Card>
