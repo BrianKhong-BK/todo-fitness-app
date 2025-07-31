@@ -5,7 +5,7 @@ import { AuthContext } from "./contexts/AuthContext";
 import { TodoContext } from "./contexts/TodoContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+import Signup from "./pages/Signup";
 import DashboardLayout from "./pages/DashboardLayout";
 import DashboardMain from "./pages/DashboardMain";
 import HomeMain from "./pages/HomeMain";
