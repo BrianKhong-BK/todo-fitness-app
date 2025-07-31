@@ -4,7 +4,7 @@ import { UserContext } from "./contexts/UserContext";
 import { AuthContext } from "./contexts/AuthContext";
 import { TodoContext } from "./contexts/TodoContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
 import DashboardLayout from "./pages/DashboardLayout";
 import DashboardMain from "./pages/DashboardMain";
