@@ -1,5 +1,7 @@
 import { Col, Row, Container, Button, Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import cover from "../images/cover.jpg";
+import logo from "../images/logo.png";
 
 export default function HomeMain() {
   const navigate = useNavigate();
@@ -17,7 +19,7 @@ export default function HomeMain() {
       <Navbar className="pt-3" style={{ height: "7vh" }}>
         <Container className="px-5" fluid>
           <Navbar.Brand href="/" className="d-flex align-items-center gap-1">
-            <img src="src/images/logo.png" alt="" style={{ width: "30px" }} />
+            <img src={logo} alt="" style={{ width: "30px" }} />
             <strong>GrindTrack</strong>
           </Navbar.Brand>
         </Container>
@@ -30,7 +32,7 @@ export default function HomeMain() {
           style={{
             width: "95vw",
             height: "80vh",
-            backgroundImage: "url(src/images/cover.jpg)",
+            backgroundImage: `url(${cover})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             borderRadius: "30px",
